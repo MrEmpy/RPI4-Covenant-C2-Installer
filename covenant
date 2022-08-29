@@ -1,0 +1,13 @@
+#!/bin/bash
+
+main() {
+    export DOTNET_ROOT=/root/.dotnet/
+    cd /root/Covenant/Covenant && /root/.dotnet/dotnet run
+}
+
+if [[ $EUID -ne 0 ]]; then
+   printf "\033[0;34m[*] \033[0;37mYou are not running Covenant as root" 
+   exit
+fi
+
+main

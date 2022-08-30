@@ -8,6 +8,7 @@ main() {
     chmod +x /usr/bin/covenant
     cd /root/.dotnet && tar -xf dotnet-sdk-3.1.422-linux-arm.tar.gz
     cd /root/.dotnet && rm dotnet-sdk-3.1.422-linux-arm.tar.gz
+    ln -s /root/.dotnet/dotnet /usr/bin/dotnet
     export DOTNET_ROOT=/root/.dotnet/
     echo "export DOTNET_ROOT=/root/.dotnet/" >> ~/.bashrc
     cd /root && git clone https://github.com/cobbr/Covenant
